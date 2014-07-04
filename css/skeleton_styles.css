@@ -1,0 +1,19 @@
+nav ul {
+  display: inline;
+  list-style:none;
+  line-height:50px;
+  
+}
+
+nav a {
+  text-decoration:none;
+  color: red;
+ 
+}
+
+#nav {
+  height: 50px;
+  width:100%;
+  background color: black;
+  
+}
