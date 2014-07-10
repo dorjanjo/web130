@@ -9,6 +9,10 @@ body {
 
 /*NAVIGATION STYLES START*/
 
+#main-menu {
+  width:100%;
+}
+
 #main-menu ul {
   list-style:none;
   padding-left:10px;
