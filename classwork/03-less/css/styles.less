@@ -1,0 +1,96 @@
+@import "config.less"; 
+
+body {  
+    background: lighten(@theme, 30%);  
+    font-family: AsapRegular, sans-serif;  
+    font-size: 11pt;  
+}
+
+body {  
+    background: lighten(@theme, 30%);  
+    font-family: AsapRegular, sans-serif;  
+    font-size: 11pt;  
+}
+
+nav {  
+    margin: 50px auto 0;  
+    width: 788px;  
+    height: 45px;  
+    .border;  
+    .shadow;  
+        ul {  
+            padding: 0;  
+            margin: 0;  
+            li {  
+                display: inline;
+                a {  
+                    text-decoration: none;  
+                    display: inline-block;  
+                    float: left;  
+                    width: 156px;  
+                    height: 45px;  
+                    text-align: center;  
+                    line-height: 300%;  
+                    .textcolor(#f2f2f2); // You can change this line  
+                    .divider;  
+                    .gradient;  
+                    &:hover {  
+                        .hovereffect;  
+                    }  
+                }  
+            }  
+            li:first-child a {  
+                border-left: none;  
+            }  
+            li:last-child a {  
+                border-right: none;  
+            }  
+        }  
+    }
+
+.border_none {
+  border:none;
+}
+
+/* start of dropdown */
+nav ul {
+  list-style-type:none;
+}
+
+nav ul li {
+    position:relative;
+}
+
+nav li a {
+  text-decoration:none;
+  display:block;
+}
+
+nav li a:hover {
+  color: #000;
+}
+
+/* sub menu styles */
+
+nav ul li ul {
+  position:absolute;
+  visibility:hidden;
+  opacity:0;
+  transition: visibility 0s linear 1s, opacity 1s linear;
+  padding-top:45px;
+  margin-left:-156px;
+}
+
+nav ul li:hover ul {
+  visibility:visible;
+  opacity:1;
+  transition-delay:0s;
+}
+
+nav ul li ul li {
+  float:none;
+  display:block;
+ 
+}
+/* end of dropdown */
+

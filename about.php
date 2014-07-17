@@ -1,7 +1,10 @@
 <html>
 <head>
 <title>Doreen's Portal</title>
-  <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+   <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+  <link rel="stylsheet/less" href="css/config.less" type="text/css"/>
+  <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+  <script src="js/less-1.7.3.min.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -11,12 +14,12 @@
   <h2>Web 130 - Web Authoring</h2>
 </div>
   
-<?php include 'includes/nav.php' ?>
+<?php include 'includes/nav_new.php' ?>
 
 <div id="section">
   <section>
   <h2>About</h2>
-  <img src="img/me.png" alt="me"/>
+  <img src="http://edison.seattlecentral.edu/~djones33/web130/skeleton/img/me.png"/>
   <p>A Little About Me... My name is Doreen Jones; my friends and family call me Dodi. I am a homegrown Washingtonian and this is my third quarter, here, at Seattle Central College on the Web Design track.</p>
 
 <p>Growing up, I have always had a passion and natural knack for design. Given the challenging job market and the non-stop, exponential growth of information technology, I figured tailoring my skills in design for the web would be the perfect route, for not only job security, but for also creating a career path that I can be passionate about and have fun with!</p>

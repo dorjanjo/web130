@@ -1,7 +1,10 @@
 <html>
 <head>
 <title>Doreen's Portal</title>
-<link rel='stylesheet' href='css/styles.css' type='text/css'/>
+ <link rel="stylesheet" href="css/styles.css" type="text/css"/>
+  <link rel="stylsheet/less" href="css/config.less" type="text/css"/>
+  <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+  <script src="js/less-1.7.3.min.js" type="text/javascript"></script>
   
 <script type="text/javascript">
   window.onload = function(){
@@ -22,7 +25,7 @@
   <h2>Web 130 - Web Authoring</h2>
 </div>
   
-<?php include 'includes/nav.php' ?>
+<?php include 'includes/nav_new.php' ?>
 
 <div id='section'>
   <section>

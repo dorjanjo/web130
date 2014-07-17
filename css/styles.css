@@ -1,6 +1,6 @@
 /*SUB MENU STYLES*/
 
-#nav ul li ul {
+/*#nav ul li ul {
   position: absolute;
   visibility:hidden;
   opacity:0;
@@ -27,7 +27,7 @@
 
 /*SUB MENU STYLES END*/
 
-#nav ul {
+/*#nav ul {
   list-style:none;
   padding-left:;
   position:relative;
@@ -87,7 +87,7 @@ nav a {
 
 #nav a:active {
     text-decoration: underline;
-}
+}*/
 
 
 #header h2 {
@@ -127,12 +127,6 @@ nav a {
 	font-size:.9em;
 	
 }
-
-ul li {
-	text-decoration:none;
-}
-
-
 
 body {
   width:90%;
@@ -212,8 +206,12 @@ body, img {
 	
 	
 }
+  
+  nav ul li {
+    display:block;
+  }
 
-#nav ul li ul {
+/*#nav ul li ul {
 	width:100%;
 	margin-top:21px;
 	
@@ -241,7 +239,7 @@ nav ul {
 	
 	
 	
-}
+}*/
 	
   #section {
     float: none;
