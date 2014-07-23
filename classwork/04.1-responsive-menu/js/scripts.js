@@ -3,6 +3,8 @@ $(document).ready(function(){
   
   $(".toggleMenu").click(function(e) {
     e.preventDefault();
+    //add active class for styling
+    $(this).toggleClass('active');
     $(".nav").toggle();
   });
   
@@ -12,25 +14,60 @@ $(document).ready(function(){
     }
   });
   
+  adjustMenu();
+
+ 
+});//end document.ready function
+
+//call function on page load and window resize
+var adjustMenu = function() { //start function curly
+    
     if (ww < 800) {
     $(".toggleMenu").css("display", "inline-block");
-    $(".nav").hide();
-    $(".nav li a").click(function() {
+   
+    
+    //add condition to show/hide btn if btn active
+    if (!$(".toggleMenu").hasClass(".active")) {
+      $(".nav").hide();
+    }  else {
+      $(".nav").show();
+    }
+    
+     
+      
+      //unbind events on small screen
+      $(".nav li").unbind('mouseenter mouseleave');
+      
+      $(".nav li a.parent").unbind('click').bind('click', function(e) {
+      //attached to anchor element to prevent bubbling
+      e.preventDefault();
       $(this).parent("li").toggleClass("hover");
     });
   } else {
-    $("toggleMenu").css("display", "none");  
+    $("toggleMenu").css("display", "none");
+    
+    //show nav on resize
+    $(".nav").show();
+    
     $(".nav li").hover(function() {
       $(this).addClass("hover");
     }, function() {
       $(this).removeClass("hover");
+      
+     $(".nav li").removeClass(".hover");
+      $(".nav li a").unbind('click');
+      $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+        $(this).toggleClass('hover');
     });
    } 
- 
-});//end document.ready function
+  
+}; //end function curly
 
-
-
+//call adjustMenu() on window resize
+$(window).bind('resize orientationchange', function() {
+  ww = window.body.clientWidth;
+  adjustMenu();
+});
 
 
 
