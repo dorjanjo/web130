@@ -1,6 +1,5 @@
+ var ww = document.body.clientWidth;
 $(document).ready(function(){
-  var ww = document.body.clientWidth;
-  
   $(".toggleMenu").click(function(e) {
     e.preventDefault();
     //add active class for styling
@@ -49,14 +48,14 @@ var adjustMenu = function() { //start function curly
     //show nav on resize
     $(".nav").show();
     
-    $(".nav li").hover(function() {
-      $(this).addClass("hover");
-    }, function() {
-      $(this).removeClass("hover");
+//    $(".nav li").hover(function() {
+//    $(this).addClass("hover");
+//    }, function() {
+//   $(this).removeClass("hover");
       
      $(".nav li").removeClass(".hover");
-      $(".nav li a").unbind('click');
-      $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
+     $(".nav li a").unbind('click');
+     $(".nav li").unbind('mouseenter mouseleave').bind('mouseenter mouseleave', function() {
         $(this).toggleClass('hover');
     });
    } 
