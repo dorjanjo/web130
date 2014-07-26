@@ -6,7 +6,7 @@
           <ul>
            <li><a href="#" class="border_none">A01 - Setup Environment </a></li>
            <li><a href="#" class="border_none">A02 - Responsive Skeleton </a></li>
-           <li><a href="#" class="border_none">A03 - Assignment</a></li>
+           <li><a href="#" class="border_none">A03 - LESS</a></li>
            <li><a href="#" class="border_none">A04 - Assignment </a></li>
             
           </ul>
