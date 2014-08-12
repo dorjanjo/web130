@@ -1,13 +1,15 @@
 <html>
 <head>
 <title>Doreen's Portal</title>
- <!-- <link rel="stylesheet" href="css/styles.css" type="text/css"/>-->
-  <link rel="stylsheet/less" href="css/config.less" type="text/css"/>
-  <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+ <link rel="stylsheet/less" href="css/config.less" type="text/css">
+ <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+ <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
   <script src="js/less-1.7.3.min.js" type="text/javascript"></script>
 </head>
 
-<body>
+<body class="container">
 
 <div id="header">
   <h1>Welcome to Doreen's Portal Page!</h1>

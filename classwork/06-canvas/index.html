@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>HTML Canvas</title>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script>
+  function draw1() {
+     
+    var canvas = document.getElementById("canvas1");
+    var context = canvas.getContext("2d");
+
+    if(!context) return;
+    //draw a rectanle
+    //x, y, width, height
+
+    context.fillStyle = "lightblue";
+    context.fillRect(25,50,40,40);
+    //context.fillRect(x,y,w,h)
+
+    context.strokeStyle = "#000";
+    context.strokeRect(24.5,49.5,40,40);
+
+    context.beginPath();
+    context.arc(150,75,15,0,2 * Math.PI, true);
+    context.closePath();
+    context.fill();
+  }
+  
+  function draw2() {
+    var canvas = document.getElementById("canvas2");
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      
+      //red rectangle 
+      ctx.fillStyle = "rgb(200, 0, 0)";
+      ctx.fillRect (10, 10, 55, 50);
+      
+      //blue rectangle 2
+      ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+      ctx.fillRect (30, 30, 55, 50);
+      
+      //3 rectangles and a stroke
+      ctx.fillStyle = "lightblue";
+      ctx.fillRect(100,100,100,100);
+      
+      ctx.fillStyle = "red";
+      ctx.fillRect(120,120,60,60);
+    
+      ctx.clearRect(125,125,50,50);
+      ctx.strokeRect(125,125,49.5,49.5);
+    }
+  }
+  
+  function draw3() {
+    //drawing a triangle using "beginPath", "moveTo" and "lineTo"
+    var canvas = document.getElementById('canvas3');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      
+      ctx.beginPath();
+      ctx.moveTo(75,50);
+      ctx.lineTo(100,75);
+      ctx.lineTo(100,25);
+      ctx.fill();
+    }
+  }
+  
+  
+  function draw4() {
+    //drawing a smiley face using "beginPath", "arc", "moveTo", and "stroke"
+    var canvas = document.getElementById('canvas4');
+    if (canvas.getContext) {
+      var ctx = canvas.getContext("2d");
+      
+     
+    }
+  }
+ 
+</script>
+  
+<style type="text/css">
+  canvas {
+    border: 1px solid black;
+  }  
+</style>
+  
+</head>
+<body onload="draw1(); draw2(); draw3(); draw4();">
+
+  <canvas id="canvas1" width="300px" height="300px">
+    Your browser does not support this HTML element.
+   </canvas>
+  
+  <canvas id="canvas2" width="300px" height="300px">
+    
+   </canvas>
+  
+   <canvas id="canvas3" width="300px" height="300px">
+    
+   </canvas>
+  
+   <canvas id="canvas4" width="300px" height="300px">
+    
+   </canvas>
+  
+ <!-- <canvas id="stockGraph" width="150px" height="150px">
+    Current stock price: $3.15 + 0.15
+   </canvas>
+  
+  <canvas id="tutorial" width="150px" height="150px">
+   <img src="img/Chrysanthemum.jpg" width="150" alt="a picture"/>
+   </canvas>-->
+
+</body>
+</html>

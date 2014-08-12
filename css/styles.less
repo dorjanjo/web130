@@ -14,103 +14,158 @@ body {
   margin-top:30px;
 }
 
-nav {  
-    margin: 20px auto 0;
-    width: 100%;  
-    height: 45px;  
-    .border;  
-   .shadow;
+
+/*NAV STYLING START*/
+body, nav, ul, li, a {
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+body {
+  font-family:"Century Gothic";
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+
+
+.toggleMenu {
+  display: none;
+  background: #666;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.nav {
+  list-style: none;
+  *zoom: 1;
   .gradient;
-        ul {  
-            padding: 0;  
-            
-      
-            li {  
-                display: inline;
-                a {  
-                    text-decoration: none;  
-                    display: inline-block;  
-                    float: left;  
-                    width: 156px;  
-                     
-                    text-align: center;  
-                    line-height: 300%;  
-                    .textcolor(#424242); // You can change this line  
-                    .divider;  
-                    .gradient;  
-                    &:hover {  
-                        .hovereffect;  
-                    }  
-                }  
-            }  
-            li:first-child a {  
-               
-                
-            }  
-            li:last-child a {  
-                
-            }  
-        }  
-    }
+  position: relative;
+}
+
+.nav:before, .nav:after {
+  content: "";
+  display: table;
+}
+
+.nav:after {
+  clear: both;
+}
+
+.nav ul {
+  list-style: none;
+  width: 10em;
+}
+
+.nav a {
+  padding: 10px 15px;
+  color: #fff;
+  *zoom: 1;
+}
+
+.nav > li {
+  float: left;
+  z-index: 200;
+}
+
+.nav > li > a {
+  display: block;
+}
+
+.nav li ul {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+}
+
+.nav li li a {
+  display: block;
+  background:  lighten(@theme, 1%);
+  position: relative;
+  z-index: 100;
+  border-top: 1px solid #211F1F;
+}
+
+.nav li li li a {
+  background: #249578;
+  z-index: 200;
+  border-top: 1px solid #211F1F;
+}
+
+.nav li {
+  position: relative;
+}
+
+.nav > li.hover > ul {
+  left: 0;
+}
+
+.nav li li.hover ul {
+  left: 100%;
+  top: 0;
+}
+
+.nav > li > .parent {
+background-position: 95% 50%;
+}
+
+.nav li li .parent { 
+background-image: url("../images/downArrow.png");
+background-repeat: no-repeat;
+background-position: 95% 50%; 
+}
+
+@media screen and (max-width: 800px) {
+    
+  .active {
+    display: block;
+  }
+  .nav > li {
+    float: none;
+    border-top: 1px solid #211F1F;
+  }
+  .nav ul {
+    display: block;
+    width: 100%;
+  }
+  .nav > li.hover > ul, .nav li li.hover ul {
+    position: static;
+  }
+  .nav > li > .parent {
+    background-position: 95% 50%;
+  }
+  .nav li li .parent { 
+    background-image: url("../images/downArrow.png");
+    background-repeat: no-repeat;
+    background-position: 95% 50%; 
+  }
+}
+
+/*NAV STYLING END*/
+
+
 
 .border_none {
   border:none;
 }
 
-/* start of dropdown */
-nav ul {
-  list-style-type:none;
-  margin: auto 0; 
-  
-  
+.label_align {
+  text-align:right;
 }
 
-nav ul li {
-    position:relative;
+.inline > input , .inline > select {
+  display:inline;
 }
 
-nav li a {
-  text-decoration:none;
-  display:block;
-}
-
-nav li a:hover {
-  color: #000;
-}
-
-/* sub menu styles */
-
-nav ul li ul {
-  position:absolute;
-  visibility:visible;
-  opacity:0;
-  transition: visibility 0s linear 1s, opacity 1s linear;
-  padding-top:46px;
-  margin-left:-157px;
- 
-}
-
-nav ul li:hover ul {
-  visibility:visible;
-  opacity:1;
-  transition-delay:0s;
-}
-
-nav ul li ul li {
-  float:none;
-  display:block;
-   .divider; 
-  
-}
-
-nav ul li ul li a {
-  height: 100%; 
-  line-height:150%;
-  padding: 10px 0;
-  .sub-background;
-  
-  
-}
 
 #aside {
   background: darken(@theme, 30%);
@@ -128,7 +183,7 @@ nav ul li ul li a {
   background: lighten(@theme, 10%);
   color:#000;
   float:left;
-  width:55%;
+  width:51%;
   padding:0px 20px 20px 20px;
   margin:15px 0 0 15px;
 }
@@ -153,16 +208,10 @@ nav ul li ul li a {
   
   #section {
 	  text-align:center;
+    margin:0 auto;
   }
   
-  #label {
-	  display:block;
-  }
-  
-  #name {
-	  display:block;
-	  margin:auto;
-  }
+ 
 }
 
 @media all and (max-width:480px) {
@@ -179,13 +228,12 @@ body, img {
 	
 }
   
-  nav ul li {
-    display:block;
-  }
-	
+ 
   #section {
     float: none;
-    width: 98%;
+    width: 90%;
+    margin:0;
+    padding:1em;
 	
 	
   }
@@ -196,7 +244,9 @@ body, img {
   
   #aside {
     float: none;
-    width: 98%;
+    width: 90%;
+    margin:0;
+    padding:1em;
   }
   
   #aside li {
